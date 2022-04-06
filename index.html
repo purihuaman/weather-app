@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather app</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+	<body>
+		<main class="main">
+			<div class="form__container">
+				<div class="form__header">
+					<h1 id="weather-location"></h1>
+					<h2 id="weather-description"></h2>
+					<h3 id="weather-string"></h3>
+					<ul>
+						<li id="weather-humidity" class="list__item"></li>
+						<li id="weather-wind" class="list__item"></li>
+					</ul>
+				</div>
+
+				<div class="form__content">
+					<form id="form" class="form">
+						<div class="form__field">
+							<input
+								type="text"
+								id="city"
+								name="city"
+								class="form__input"
+								placeholder="Ciudad"
+								autofocus
+							/>
+						</div>
+
+						<div class="form__field">
+							<input
+								type="text"
+								id="country-code"
+								name="countryCode"
+								class="form__input"
+								placeholder="Código de país"
+							/>
+						</div>
+
+						<span id="message-error" class="message-error"></span>
+
+						<div class="form__field">
+							<button type="submit" class="button">Obtener clima</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<script src="/js/app.js" type="module"></script>
+	</body>
+</html>
