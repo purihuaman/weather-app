@@ -20,18 +20,33 @@
 	--grey-700: #191f2a;
 	--grey-800: #171c26;
 	--grey-900: #151922;
+	--grey-rgba: #15192280;
 
-	--blue-100: #94ccff;
-	--blue-200: #6fbaff;
-	--blue-300: #4eaaff;
-	--blue-400: #309bff;
-	--blue-500: #148eff;
-	--blue-600: #0080f8;
-	--blue-700: #0073df;
-	--blue-800: #0067c9;
-	--blue-900: #148eff80;
+	--blue-100: #77c8ff;
+	--blue-200: #55baff;
+	--blue-300: #36aeff;
+	--blue-400: #1aa3ff;
+	--blue-500: #0099ff;
+	--blue-600: #008ae6;
+	--blue-700: #007ccf;
+	--blue-800: #0070ba;
+	--blue-900: #0099ff80;
+
+	--purple-100: #e8d6ff;
+	--purple-200: #d4b3ff;
+	--purple-300: #c293ff;
+	--purple-400: #b175ff;
+	--purple-500: #a259ff;
+	--purple-600: #933dff;
+	--purple-700: #8524ff;
+	--purple-800: #780dff;
+	--purple-900: #a259ff80;
+
+	--alert: #ff375f;
 }
-* {
+*,
+*::after,
+*::before {
 	box-sizing: border-box;
 }
 body {
@@ -59,11 +74,8 @@ h6 {
 	padding: 0 1rem;
 	background-image: linear-gradient(
 		to bottom,
-		#0067c9,
-		#005fde,
-		#1d53ee,
-		#4d40fa,
-		#780dff
+		var(--blue-900),
+		var(--grey-rgba)
 	);
 }
 
@@ -76,13 +88,11 @@ h6 {
 	border-radius: 0.4rem;
 	width: 100%;
 	transition: width 0.5s;
+
 	background-image: linear-gradient(
-		to left top,
-		#0067c9,
-		#005fde,
-		#1d53ee,
-		#4d40fa,
-		#780dff
+		to bottom,
+		var(--blue-900),
+		var(--grey-rgba)
 	);
 }
 @media screen and (min-width: 768px) {
@@ -105,7 +115,7 @@ h6 {
 }
 .alert {
 	margin-bottom: 1rem;
-	color: #ff375f;
+	color: var(--alert);
 }
 .form__field {
 	margin-bottom: 1rem;
@@ -136,24 +146,21 @@ button {
 	margin-right: auto;
 	background-image: var(--gradiendt-btn);
 	transition: transform 0.5s;
+
 	background-image: linear-gradient(
 		to right,
-		#0067c9,
-		#005fde,
-		#1d53ee,
-		#4d40fa,
-		#780dff
+		var(--purple-900),
+		var(--blue-900)
 	);
+	background-color: var(--blue-800);
 }
 .button:hover {
 	background-image: linear-gradient(
 		to left,
-		#0067c9,
-		#005fde,
-		#1d53ee,
-		#4d40fa,
-		#780dff
+		var(--purple-900),
+		var(--blue-900)
 	);
+	background-color: var(--blue-800);
 }
 .button:active {
 	transform: scale(0.98);
